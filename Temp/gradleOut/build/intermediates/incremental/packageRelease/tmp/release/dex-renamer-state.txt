@@ -1,0 +1,4 @@
+#Mon Jan 27 23:29:59 GMT+02:00 2020
+base.0=/Users/kaanserin113/Downloads/Custom Slots framework v1.4/GymLiftsWeightTracker/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
