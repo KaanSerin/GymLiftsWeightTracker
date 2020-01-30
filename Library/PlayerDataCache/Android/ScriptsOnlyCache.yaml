@@ -29,6 +29,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -71,6 +72,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9392}
     - Class: 114
       Script: {instanceID: 9400}
+    - Class: 114
+      Script: {instanceID: 9402}
     - Class: 114
       Script: {instanceID: 9422}
     - Class: 114
@@ -614,7 +617,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 3e310f42bc177ea92ceafbe5a40a55af
+      Hash: f1d09e3753d67f25e2e8d0bbb467a5c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddLiftBtn
@@ -686,7 +689,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 172cf76ebc490b815c90af09536d1bd7
+      Hash: 28b77899ab45e3878677f832fee2aca7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LiftTextManager

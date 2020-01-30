@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using TMPro;
 public class AddLiftBtn : MonoBehaviour
 {
     // New Lift TextBox
-    public TextMeshProUGUI liftInputArea;
+    public TMP_InputField liftInputArea;
 
     //
     public RectTransform content;
@@ -36,7 +37,15 @@ public class AddLiftBtn : MonoBehaviour
         }
     }
 
-   void Start()
+
+    void Update()
+    {
+        // Updating the size of the content view
+        // so that the user can not scroll out of view
+        content.sizeDelta = new Vector2(0, noOfLifts * 101);
+    }
+
+    void Start()
     {
         // Used toe delete all the saved values(for testing)
         //PlayerPrefs.DeleteAll();
@@ -51,10 +60,19 @@ public class AddLiftBtn : MonoBehaviour
 
     public void addLift()
     {
-        GameObject liftObject = liftObjects[noOfLifts++];
-        liftObject.SetActive(true);
-        LiftTextManager ltm = liftObject.GetComponent<LiftTextManager>();
-        ltm.liftNameUI.text = liftInputArea.text;
-        liftInputArea.text = "";
+        if(liftInputArea.text != "")
+        {
+            GameObject liftObject = liftObjects[noOfLifts++];
+            liftObject.SetActive(true);
+
+            LiftTextManager ltm = liftObject.GetComponent<LiftTextManager>();
+
+            // Using this to convert the inputText to titleCase
+            TextInfo ltext = new CultureInfo("en-US", false).TextInfo;
+            // ltext.toTitleCase() returns a 'title case' string
+            ltm.liftNameUI.text = ltext.ToTitleCase(liftInputArea.text);
+            // reset the input area text
+            liftInputArea.text = "";
+        }
     }
 }
