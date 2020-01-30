@@ -14,38 +14,47 @@ public class AddLiftBtn : MonoBehaviour
     public GameObject liftPrefab;
 
     //
-    public int noOfBtns = 0;
+    public int noOfLifts = 0;
 
     // For each liftObjects[i] the liftNames[i] will match
     public GameObject[] liftObjects;
-    public string[] liftNames;
 
     // The liftObjects textbox value will be mapped from the dictionary below
     public Dictionary<string, int> liftsAndWeights = new Dictionary<string, int>();
 
+    // Saving the values using Unity's PlayerPrefs
     public void Save()
     {
+        // Saving the number of lifts
+        PlayerPrefs.SetInt("noOfLifts", noOfLifts);
+
         foreach(GameObject liftObject in liftObjects)
         {
             LiftTextManager liftObjectManager = liftObject.GetComponent<LiftTextManager>();
-            string lName = liftObjectManager.liftName;
-            string lWeight = liftObjectManager.weightUI.text;
-            PlayerPrefs.SetString(lName, lWeight);
-            Debug.Log("Saved " + lName + " with weight " + lWeight);
+            PlayerPrefs.SetString(liftObjectManager.liftId.ToString(), liftObjectManager.liftNameUI.text);
+            PlayerPrefs.SetString(liftObjectManager.liftNameUI.text, liftObjectManager.weightUI.text);
         }
     }
 
-   void Update()
+   void Start()
     {
-        
+        // Used toe delete all the saved values(for testing)
+        //PlayerPrefs.DeleteAll();
+
+        // Turning on all the saved lift objects
+        noOfLifts = PlayerPrefs.GetInt("noOfLifts");
+        for (int i = 0; i < noOfLifts; i++)
+        {
+            liftObjects[i].SetActive(true);
+        }
     }
 
     public void addLift()
     {
-        Vector3 offset = new Vector3(0, noOfBtns * 110, 0);
-        GameObject newLift = Instantiate(liftPrefab, content);
-        newLift.transform.position -= offset;
-        liftObjects[noOfBtns] = newLift;
-        noOfBtns++;
+        GameObject liftObject = liftObjects[noOfLifts++];
+        liftObject.SetActive(true);
+        LiftTextManager ltm = liftObject.GetComponent<LiftTextManager>();
+        ltm.liftNameUI.text = liftInputArea.text;
+        liftInputArea.text = "";
     }
 }

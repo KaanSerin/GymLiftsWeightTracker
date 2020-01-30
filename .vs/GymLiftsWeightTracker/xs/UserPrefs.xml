@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{75305ADA-F4C0-208F-8A80-809A261B48DE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LiftTextManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/AddLiftBtn.cs" Line="24" Column="12" />
-      <File FileName="Assets/Scripts/LiftTextManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AddLiftBtn.cs" Line="42" Column="11" />
+      <File FileName="Assets/Scripts/LiftTextManager.cs" Line="15" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bf533397-74ad-4570-bc68-5be525376de7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="11808135-63fd-4a9a-bfc4-4157d5d73948" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
