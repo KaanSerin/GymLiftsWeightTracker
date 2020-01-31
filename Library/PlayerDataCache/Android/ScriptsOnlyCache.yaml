@@ -617,7 +617,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: f1d09e3753d67f25e2e8d0bbb467a5c3
+      Hash: 8bcbe99d323f1d435e5864ea15d87476
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddLiftBtn

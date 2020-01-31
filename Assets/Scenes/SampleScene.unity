@@ -4068,6 +4068,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 595661250, guid: af93e13f8f05041cab61b8afe430e843, type: 3}
+      propertyPath: liftId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af93e13f8f05041cab61b8afe430e843, type: 3}
 --- !u!1 &1287701734
@@ -6484,24 +6488,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 595661250, guid: af93e13f8f05041cab61b8afe430e843, type: 3}
-      propertyPath: liftId
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5824841488189637655, guid: af93e13f8f05041cab61b8afe430e843,
-        type: 3}
-      propertyPath: m_ContentType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5824841488189637655, guid: af93e13f8f05041cab61b8afe430e843,
-        type: 3}
-      propertyPath: m_KeyboardType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5824841488189637655, guid: af93e13f8f05041cab61b8afe430e843,
-        type: 3}
-      propertyPath: m_CharacterValidation
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1387878719, guid: af93e13f8f05041cab61b8afe430e843, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: af93e13f8f05041cab61b8afe430e843, type: 3}
